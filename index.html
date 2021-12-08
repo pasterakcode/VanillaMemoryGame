@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanilla Memory Game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="gameTask game">
-                <div class="levelCounter">
-                    <div class="level" id="level.1">1</div>
-                    <div class="level" id="level.2">2</div>
-                    <div class="level" id="level.3">3</div>
-                    <div class="level" id="level.4">4</div>
-                    <div class="level" id="level.5">5</div>
-                </div>
-                <div class="gameCards">
-                    <div class="card" id="card.0">1</div>
-                    <div class="card" id="card.1">2</div>
-                    <div class="card" id="card.2">3</div>
-                    <div class="card" id="card.3">4</div>
-                    <div class="card" id="card.4">5</div>
-                    <div class="card" id="card.5">6</div>
-                    <div class="card" id="card.6">7</div>
-                    <div class="card" id="card.7">8</div>
-                    <div class="card" id="card.8">9</div>
-                </div>
-            </div>
-            <div class="gameSolution game">
-                <div class="levelCounter">
-                    <div class="level" id="level.1"></div>
-                    <div class="level" id="level.2"></div>
-                    <div class="level" id="level.3"></div>
-                    <div class="level" id="level.4"></div>
-                    <div class="level" id="level.5"></div>
-                </div>
-                <div class="gameCards">
-                    <div class="card" id="card.0"></div>
-                    <div class="card" id="card.1"></div>
-                    <div class="card" id="card.2"></div>
-                    <div class="card" id="card.3"></div>
-                    <div class="card" id="card.4"></div>
-                    <div class="card" id="card.5"></div>
-                    <div class="card" id="card.6"></div>
-                    <div class="card" id="card.7"></div>
-                    <div class="card" id="card.8"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <script src="main.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vanilla Memory Game</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h4>Vanilla Memory Game</h4>
+			</header>
+			<div class="sectionSelect">
+				<label for="selectLevels">Select level:</label>
+				<input
+                    class="inputSelectLevels"
+					type="range"
+					name="selectLevels"
+					id="selectLevels"
+					value="5"
+					min="1"
+					max="10"
+				/>
+                <p class="inputValue">5</p>
+			</div>
+			<div class="sectionAction">
+				<button class="btnStart">Start</button>
+				<button class="btnReset">Reset</button>
+			</div>
+			<div class="row sectionGame">
+				<div class="gameTask game">
+					<div class="levelCounter">
+					</div>
+					<div class="gameCards">
+						<div class="card" id="card.1">1</div>
+						<div class="card" id="card.2">2</div>
+						<div class="card" id="card.3">3</div>
+						<div class="card" id="card.4">4</div>
+						<div class="card" id="card.5">5</div>
+						<div class="card" id="card.6">6</div>
+						<div class="card" id="card.7">7</div>
+						<div class="card" id="card.8">8</div>
+						<div class="card" id="card.9">9</div>
+					</div>
+				</div>
+				<div class="gameSolve game">
+					<div class="levelCounter">
+					</div>
+					<div class="gameCards">
+                    	<div class="card" id="card.1">1</div>
+						<div class="card" id="card.2">2</div>
+						<div class="card" id="card.3">3</div>
+						<div class="card" id="card.4">4</div>
+						<div class="card" id="card.5">5</div>
+						<div class="card" id="card.6">6</div>
+						<div class="card" id="card.7">7</div>
+						<div class="card" id="card.8">8</div>
+						<div class="card" id="card.9">9</div>
+					</div>
+				</div>
+			</div>
+			<div class="sectionInfo">
+				<p class="selectedCard"></p>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
 </html>
