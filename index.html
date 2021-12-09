@@ -16,73 +16,76 @@
 	<body>
 		<div class="container">
 			<header>
-				<h4>Vanilla Memory Game</h4>
+				<h4>Vanilla JS Memory Game</h4>
 			</header>
-			<div class="sectionSelect">
-				<label for="selectLevels">Select level:</label>
-				<input
-                    class="inputSelectLevels"
-					type="range"
-					name="selectLevels"
-					id="selectLevels"
-					value="5"
-					min="1"
-					max="10"
-				/>
-                <p class="inputValue">5</p>
-			</div>
-			<div class="sectionAction">
-				<button class="btnStart">Start</button>
-				<button class="btnReset" style="display: none">Reset</button>
-			</div>
-			<div class="row sectionGame">
-				<div class="gameTask game">
-					<div class="levelCounter">
+			<div class="mainWindow">
+				<div class="sectionSelect">
+					<label for="selectLevels">Select level:</label>
+					<input
+						class="inputSelectLevels"
+						type="range"
+						name="selectLevels"
+						id="selectLevels"
+						value="5"
+						min="1"
+						max="10"
+					/>
+					<p class="inputValue">5</p>
+				</div>
+				<div class="sectionAction">
+					<button class="btnStart">Start</button>
+					<button class="btnReset" style="display: none">Reset</button>
+				</div>
+				<div class="row sectionGame">
+					<div class="gameTask game">
+						<div class="levelCounter">
+						</div>
+						<div class="gameCards">
+							<div class="card" id="card.1"></div>
+							<div class="card" id="card.2"></div>
+							<div class="card" id="card.3"></div>
+							<div class="card" id="card.4"></div>
+							<div class="card" id="card.5"></div>
+							<div class="card" id="card.6"></div>
+							<div class="card" id="card.7"></div>
+							<div class="card" id="card.8"></div>
+							<div class="card" id="card.9"></div>
+							<div class="card" id="card.10"></div>
+							<div class="card" id="card.11"></div>
+							<div class="card" id="card.12"></div>
+							<div class="card" id="card.13"></div>
+							<div class="card" id="card.14"></div>
+							<div class="card" id="card.15"></div>
+							<div class="card" id="card.16"></div>
+						</div>
 					</div>
-					<div class="gameCards">
-						<div class="card" id="card.1">1</div>
-						<div class="card" id="card.2">2</div>
-						<div class="card" id="card.3">3</div>
-						<div class="card" id="card.4">4</div>
-						<div class="card" id="card.5">5</div>
-						<div class="card" id="card.6">6</div>
-						<div class="card" id="card.7">7</div>
-						<div class="card" id="card.8">8</div>
-						<div class="card" id="card.9">9</div>
-						<div class="card" id="card.10">10</div>
-						<div class="card" id="card.11">11</div>
-						<div class="card" id="card.12">12</div>
-						<div class="card" id="card.13">13</div>
-						<div class="card" id="card.14">14</div>
-						<div class="card" id="card.15">15</div>
-						<div class="card" id="card.16">16</div>
+					<div class="gameSolve game">
+						<div class="levelCounter">
+						</div>
+						<div class="gameCards">
+							<div class="heroShield"></div>
+							<div class="card" id="card.1"></div>
+							<div class="card" id="card.2"></div>
+							<div class="card" id="card.3"></div>
+							<div class="card" id="card.4"></div>
+							<div class="card" id="card.5"></div>
+							<div class="card" id="card.6"></div>
+							<div class="card" id="card.7"></div>
+							<div class="card" id="card.8"></div>
+							<div class="card" id="card.9"></div>
+							<div class="card" id="card.10"></div>
+							<div class="card" id="card.11"></div>
+							<div class="card" id="card.12"></div>
+							<div class="card" id="card.13"></div>
+							<div class="card" id="card.14"></div>
+							<div class="card" id="card.15"></div>
+							<div class="card" id="card.16"></div>
+						</div>
 					</div>
 				</div>
-				<div class="gameSolve game">
-					<div class="levelCounter">
-					</div>
-					<div class="gameCards">
-                    	<div class="card" id="card.1">1</div>
-						<div class="card" id="card.2">2</div>
-						<div class="card" id="card.3">3</div>
-						<div class="card" id="card.4">4</div>
-						<div class="card" id="card.5">5</div>
-						<div class="card" id="card.6">6</div>
-						<div class="card" id="card.7">7</div>
-						<div class="card" id="card.8">8</div>
-						<div class="card" id="card.9">9</div>
-						<div class="card" id="card.10">10</div>
-						<div class="card" id="card.11">11</div>
-						<div class="card" id="card.12">12</div>
-						<div class="card" id="card.13">13</div>
-						<div class="card" id="card.14">14</div>
-						<div class="card" id="card.15">15</div>
-						<div class="card" id="card.16">16</div>
-					</div>
+				<div class="sectionInfo">
+					<p class="gameStatus"></p>
 				</div>
-			</div>
-			<div class="sectionInfo">
-				<p class="gameStatus"></p>
 			</div>
 		</div>
 		<script src="main.js"></script>

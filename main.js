@@ -8,6 +8,7 @@ const btnStart = document.querySelector('.btnStart');
 const btnReset = document.querySelector('.btnReset');
 const levelCounterTask = document.querySelector('.gameTask .levelCounter');
 const levelCounterSolve = document.querySelector('.gameSolve .levelCounter');
+const heroShield = document.querySelector('.heroShield');
 let gameTask = [];
 let countOfSelectedCards = 0;
 let currentLevel = 0;
@@ -130,6 +131,7 @@ const isEndGame = () => {
 	}
 };
 const nextLevel = () => {
+	markLastLevelCounterTaskAfterGame('green');
 	currentLevel++;
 	countOfSelectedCards = 0;
 	markAFewLevels(currentLevel);
@@ -159,27 +161,32 @@ const markCurrentTaskCard = level => {
 const markCurrentTaskLevelCounter = level => {
 	const currentLevelCounter = levelCounterTask.children[level];
 	if (level === currentLevel) {
-		markElementOnColor(currentLevelCounter, 'yellow');
+		markElementOnColor(currentLevelCounter, '#809c03');
 	} else {
 		markElementOnColor(currentLevelCounter, 'green');
 	}
 };
 const markAFewLevels = async levelsToMark => {
 	for (let i = 0; i <= levelsToMark; i++) {
+		heroShieldDisplay('block');
 		await delay(1000);
 		markCurrentTaskCard(i);
 		markCurrentTaskLevelCounter(i);
 	}
+	heroShieldDisplay('none');
 };
 const markLastLevelCounterSolve = (level, color) => {
 	const currentLevelCounter = levelCounterSolve.children[level];
 	markElementOnColor(currentLevelCounter, color);
 	markElementAsTransparent(currentLevelCounter);
 };
+const heroShieldDisplay = onOff => {
+	heroShield.style.display = onOff;
+};
 const setParagraphGameStatus = status => {
 	switch (status) {
 		case 'start':
-			paragraphGameStatus.textContent = 'Your taks: Repeat sequences.';
+			paragraphGameStatus.textContent = 'Your taks: Repeat green sequences.';
 			break;
 		case 'winner':
 			paragraphGameStatus.textContent = 'You are Winner!';
